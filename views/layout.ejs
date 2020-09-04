@@ -61,41 +61,41 @@
                  <div class="card-panel z-depth-5">
                   <h5 class="center">E-Labs Recruitment</h5>
                   <p class="center">Join to our community now !</p>
-
+          
                   <div class="input-field">
                     <i class="material-icons prefix">account_circle</i>
-                    <input type="text" name="name">
-                    <label>Enter Name</label>
+                    <input id="name" type="text" name="name">
+                    <label for="name">Enter Name</label>
                   </div>
                   
                    <div class="input-field">
                     <i class="material-icons prefix">email</i>
-                    <input type="email" name="email" class="validate">
-                    <label>Enter email</label>
+                    <input id="email" type="email" name="email" class="validate">
+                    <label for="email">Enter email</label>
                   </div>
                   
                    <div class="input-field">
                     <i class="material-icons prefix">assignment_ind</i>
-                    <input type="number" name="roll">
-                    <label>College Roll Number</label>
+                    <input id="roll" type="number" name="roll">
+                    <label for="roll">College Roll Number</label>
                   </div>
 
                   <div class="input-field">
                     <i class="material-icons prefix">call</i>
-                    <input type="number" name="mobile">
-                    <label>WhatsApp Number</label>
+                    <input id="mobile" type="number" name="mobile">
+                    <label for="mobile">WhatsApp Number</label>
                   </div>
 
                   <div class="input-field">
                     <i class="material-icons prefix">account_balance</i>
-                    <input type="text" name="branch">
-                    <label>Specify your Branch</label>
+                    <input id="branch" type="text" name="branch">
+                    <label for="branch">Specify your Branch</label>
                   </div>
 
                   <div class="input-field">
                     <i class="material-icons prefix">event</i>
-                    <input type="number" name="year">
-                    <label>Current year of study</label>
+                    <input id="year" type="number" name="year">
+                    <label for="year">Current year of study</label>
                   </div>
 
                   <div class="input-field">      
@@ -106,10 +106,12 @@
                       <option value="Digital_Marketing">Digital Marketing</option>
                     </select>                    
                   </div>
-
+                  
                   <div class="input-field">
-                    <div class="g-recaptcha" data-sitekey="6Ld5qccZAAAAAB8VbicBCTesQY2InbLo7RigUCjG" data-callback="verifyCaptcha"></div>
+                    <center>
+                    <div class="g-recaptcha" data-sitekey="6Ld5qccZAAAAAB8VbicBCTesQY2InbLo7RigUCjG" data-callback="verifyCaptcha" data-size="compact"></div>
                         <div id="g-recaptcha-error"></div>
+                      </center>
                   </div>
                  
                   <input type="submit" name="submit" value="register" class="btn left col s12">
