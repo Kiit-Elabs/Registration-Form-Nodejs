@@ -19,7 +19,7 @@ router.use(bodyParser.urlencoded({
 
 //GET REQUEST ON HOMEPAGE -> CALLING LIST.EJS
 router.get('/',async (req, res) => {   
-    res.render('layout');
+    res.render('captcha',{message:"Sorry, the form has closed. <br>But if you are interested,<br> you can call us on 9163199971 <br> and get registered now !"});
   //POSTS DATA ARE PASSED INTO THE LIST.EJS ON RUNTIME ASYNCHRONOUSLY
 });
 
