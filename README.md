@@ -13,7 +13,7 @@ Make sure you have:
 * You need to change the username and password in the `app.js` file.
 
 ```sh
-git clone git@github.com: Lucifergene/Recruitment-Elabs.git
+git clone git@github.com:  Kiit-Elabs/Recruitment-Elabs.git
 cd Recruitment-Elabs
 npm install
 node app
