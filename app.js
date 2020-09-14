@@ -10,6 +10,10 @@ const app = new express();
 //SETTING THE PORT ON WHICH THE SERVER WILL RUN TO VARIABLE, SO THAT THE SYSTEM IN WHICH IT IS RUN DECIDES IT.
 const PORT = process.env.PORT || 5000;
 
+//THE MONGODB CREDENTIALS ARE STORED IN THE HEROKU CONFIG VARIABLES AVAILABLE ON THE HEROKU DASHBOARD. THEY CAN BE RETRIEVED USING THE FOLLOWING COMMANDS.
+const USERNAME = process.env.MONGODB_USERNAME
+const PASSWORD = process.env.MONGODB_PASSWORD
+
 //Setting up the public directory => CONTAINS THE FILES THAT WILL BE ACCESSIBLE TO ALL.
 //CONTAINS ALL MEDIA AND FILES REQUIRED IN THE WEB APP.
 app.use(express.static('public'));
@@ -34,7 +38,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://avik6028:avik240299@cluster0.ffv5a.mongodb.net/<dbname>?retryWrites=true&w=majority', {useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect('mongodb+srv://${USERNAME}:${PASSWORD}@cluster0.ffv5a.mongodb.net/<dbname>?retryWrites=true&w=majority', {useUnifiedTopology: true, useNewUrlParser: true })
 
   .then(() => 
         console.log('You Are MongoDB Connected !'))
