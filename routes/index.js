@@ -37,7 +37,7 @@ router.post('/posts/store', (req, res) => {
         res.render('captcha',{message:"Captcha Verification Failed. Retry filling the form."});        
   }
 
-  const secretKey = "6Ld5qccZAAAAAGScipF-I8i4oFPBoksXDc3_uhB-";
+  const secretKey = ${secretKey};
 
   const verificationURL = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
 
@@ -46,14 +46,14 @@ router.post('/posts/store', (req, res) => {
 
     if(body.success !== undefined && !body.success) 
     {
-      res.render('captcha',{message:"Captcha Verification Failed. Retry filling the form."});      
+      res.render('modal',{message:"Captcha Verification Failed. Retry filling the form."});      
     }
   });
 
 
   console.log(req.body)
   Post.create(req.body, (error, post) => {
-      res.render('captcha',{message:"We have received your application. You will be contacted soon."})
+      res.render('modal',{message:"We have received your application. You will be contacted soon."})
   })
 });
 
